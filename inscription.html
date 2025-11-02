@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inscription - Esdras Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #fff8ed;
+      font-family: 'Segoe UI', sans-serif;
+      color: #3d2c1c;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff7e6;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #f4c95d;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(90, 62, 27, 0.2);
+    }
+    .form-container h2 {
+      text-align: center;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #a77200;
+    }
+    .info {
+      text-align: center;
+      font-size: 1em;
+      color: #6b4500;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Esdras Design</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="inscription.html">Inscription</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="form-container">
+  <h2>Rejoignez-nous</h2>
+  <p class="info">Inscrivez-vous pour recevoir nos créations, actualités et offres exclusives.</p>
+
+  <!-- 🔁 À remplacer par ton iframe Google Forms si tu veux -->
+  <form action="https://formspree.io/f/myzbbqrg" method="post">
+    <input type="text" name="nom" placeholder="Votre nom complet" required>
+    <input type="email" name="email" placeholder="Votre adresse email" required>
+    <textarea name="besoin" placeholder="Parlez-nous de vos besoins..." rows="4"></textarea>
+
+<button type="submit">S'inscrire</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Esdras Design. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

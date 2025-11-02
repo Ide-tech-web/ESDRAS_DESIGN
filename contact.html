@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - Esdras Design</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fef9f4, #f4e0c9);
+      color: #3d2c1c;
+    }
+
+    header {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff7e6;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f4c95d;
+    }
+
+    .contact-section {
+      max-width: 750px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(90, 62, 27, 0.2);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #5a3e1b;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      text-align: center;
+      color: #6b4500;
+      margin-bottom: 30px;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #a77200;
+    }
+
+    footer {
+      background-color: #5a3e1b;
+      color: #fff7e6;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Esdras Design</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="inscription.html">Inscription</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h2>Nous contacter</h2>
+  <p>Tu as une idée, un projet ou une question ? Écris-nous ci-dessous :</p>
+
+  <!-- 🔁 Tu peux remplacer ce form par un Google Form -->
+   <form action="https://formspree.io/f/xpwooggd" method="POST">
+  <input type="text" name="nom" placeholder="Votre nom" required>
+  <input type="email" name="email" placeholder="Votre email" required>
+  <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Esdras Design. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
