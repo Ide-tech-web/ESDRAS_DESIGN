@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil -->
   <url>
     <loc>https://votre-site-sur-render.onrender.com/</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- Page À propos -->
   <url>
     <loc>https://votre-site-sur-render.onrender.com/apropos.html</loc>
     <priority>0.8</priority>
   </url>
+
+  <!-- Page Portfolio -->
   <url>
     <loc>https://votre-site-sur-render.onrender.com/portfolio.html</loc>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://votre-site-sur-render.onrender.com/contact.html</loc>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- Page Inscription -->
   <url>
     <loc>https://votre-site-sur-render.onrender.com/inscription.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Page Contact -->
+  <url>
+    <loc>https://votre-site-sur-render.onrender.com/contact.html</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
