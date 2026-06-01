@@ -1,163 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accueil - Esdras Design</title>
-  
-<h1 style="display: inline;">Esdras Design</h1>
 
-
-  <link rel="stylesheet" href="style.css" />
   <style>
-    title{
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
     body {
-      background: linear-gradient(135deg, #fceabb, #f8b500);
-      color: #3a1c00;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   /*   background: linear-gradient(135deg, #FFD700, #ffb347, #3a1c00);*/
+   background: linear-gradient(135deg, #fff8e1, #ffd54f);
+      color: #111;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
+
     header {
-      background: rgba(58, 28, 0, 0.8);
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(12px);
       padding: 20px;
       text-align: center;
-      color: #fff7e6;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      color: #fff;
     }
+
+    header img {
+      height: 90px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 2.3em;
+    }
+
     nav a {
-      color: #fff7e6;
-      margin: 0 15px;
+      color: #fff;
+      margin: 0 12px;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      font-weight: bold;
+      position: relative;
     }
-    nav a:hover {
-      color: #ffeb99;
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #FFD700;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
     }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
     main {
       flex: 1;
+      padding: 40px 20px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      padding: 40px;
-      text-align: center;
+      gap: 40px;
     }
-    .welcome-box {
-      background: rgba(255, 235, 153, 0.85);
-      padding: 40px 60px;
 
+    /* GALERIE */
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1200px;
     }
-    
-    .welcome-box h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
-      font-weight: 700;
+
+    .galerie img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: 0.4s;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     }
-    .welcome-box p {
-      font-size: 1.25em;
-      margin-bottom: 30px;
-      line-height: 1.5;
-      color: #6b4500;
+
+    .galerie img:hover {
+      transform: scale(1.08);
+      filter: brightness(1.1);
     }
+
+    /* BOUTON */
+    .btn-container {
+      margin-top: 50px;
+    }
+
     .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #6b4500;
-      color: #fff7e6;
-      font-weight: 600;
-      border-radius: 8px;
+      padding: 16px 40px;
+      background: #000;
+      color: #FFD700;
+      border-radius: 12px;
+      font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 6px 12px rgba(107, 69, 0, 0.7);
-      transition: background-color 0.3s ease;
+      font-size: 1.1em;
+      transition: 0.3s;
     }
+
     .btn:hover {
-      background-color: #a77200;
-      box-shadow: 0 8px 18px rgba(167, 114, 0, 0.85);
+      background: #222;
+      transform: scale(1.1);
     }
+
     footer {
-      background: rgba(58, 28, 0, 0.8);
+      background: rgba(0,0,0,0.85);
+      color: #fff;
       padding: 15px;
       text-align: center;
-      color: #fff7e6;
-      font-size: 0.9em;
-      box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
     }
-    @media(max-width: 600px) {
-      .welcome-box {
-        padding: 30px 20px;
+
+    @media(max-width: 768px) {
+      .galerie img {
+        height: 170px;
       }
-      .welcome-box h1 {
-        font-size: 2em;
+
+      h1 {
+        font-size: 1.8em;
       }
-    }
-    .index-image {
-      flex: 1 1 350px;
-      text-align: center;
-    }
-    .index-image img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(90, 62, 27, 0.4);
-    }
-    .galerie {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .galerie img {
-      width: 150px;
-      border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(90, 62, 27, 0.2);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .galerie img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(90, 62, 27, 0.4);
     }
   </style>
 </head>
-<img src="portfolio/20251207_192159.jpg" alt="Logo Esdras Design" style="height: 300px; vertical-align: middle; margin-right: 350px;margin-left: 350px;">
+
 <body>
 
 <header>
-  
-  <h1>Bienvenue Chez Esdras Design Un Espace Contenant Des Visuelles Qui Vous Font Revez</h1>
+  <img src="portfolio/20251207_192159.jpg" alt="Logo">
+
+  <h1>Esdras Design</h1>
+  <p>Des visuels modernes qui attirent et vendent 🚀</p>
 
   <nav>
-    <a href="apropos.html">Apropos</a>
+    <a href="apropos.html">À propos</a>
     <a href="inscription.html">Inscription</a>
     <a href="contact.html">Contact</a>
     <a href="portfolio.html">Portfolio</a>
-    
-    
- </nav>
- </header>
-    <main>
-  <div class="index-image">
-    <img src="home/img6.jpg" alt="Création graphique Esdras Design" />
-    
-  </div>
+  </nav>
+</header>
+
+<main>
 
   <div class="galerie">
-     <img src="home/img2.jpg" alt="home 2" />
-     <img src="home/img3.jpg" alt="home 3" />
-     <img src="home/img4.jpg" alt="home 4" />
-     <img src="home/img5.jpg" alt="home 5" />
-     <img src="home/img1.jpg" alt="home 6" /> 
+    <img src="home/img1.jpg">
+    <img src="home/img2.jpg">
+    <img src="home/img3.jpg">
+    <img src="home/img4.jpg">
+    <img src="home/img5.jpg">
+    <img src="home/img6.jpg">
+    <img src="home/img7.jpeg">
+    <img src="home/img8.jpeg">
+    <img src="home/img9.jpeg">
+    <img src="home/img10.jpeg">
+    <img src="home/img11.jpeg">
+    <img src="home/img13.jpg">
   </div>
-  <script>
+
+  <div class="btn-container">
+    <a href="portfolio.html" class="btn">Voir mes créations</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Esdras Design — Tous droits réservés
+</footer>
+
+<script>
   document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
   });
 </script>
 
-</main>
+</body>
+</html>
